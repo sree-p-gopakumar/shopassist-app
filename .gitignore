@@ -1,0 +1,102 @@
+# ─────────────────────────────────────────
+# SenseiWealth .gitignore
+# ─────────────────────────────────────────
+
+# ── Secrets — NEVER commit these ─────────
+.env
+.env.local
+.env.production
+.env.staging
+
+# ── Dependencies ──────────────────────────
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# ── Build outputs ─────────────────────────
+dist/
+client/dist/
+server/dist/
+build/
+
+# ── Local database ────────────────────────
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.db
+server/senseiwealth.sqlite
+
+# ── Chroma vector store data ──────────────
+# Local Chroma persisted data — not for version control
+chroma/
+.chroma/
+
+# ── Local image uploads ───────────────────
+# Investment screenshots stored locally in Stage 1
+uploads/
+!uploads/.gitkeep
+
+# ── macOS ─────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.AppleDouble
+.LSOverrideIcon
+
+# ── Claude Code ───────────────────────────
+.claude/settings.local.json
+
+# ── VS Code ───────────────────────────────
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+# Keep shared settings, ignore personal/machine-specific
+.vscode/launch.json
+
+# ── Logs ──────────────────────────────────
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ── Testing ───────────────────────────────
+coverage/
+.nyc_output/
+
+# ── TypeScript ────────────────────────────
+*.tsbuildinfo
+
+# ── Vite ──────────────────────────────────
+client/.vite/
+
+# ── Environment and config ────────────────
+*.pem
+*.key
+*.p12
+
+# ── AWS (Stage 2 — keep out of repo) ──────
+.aws/
+cdk.out/
+cdk.context.json
+samconfig.toml
+
+# ── Package manager lock files ────────────
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ── Misc ──────────────────────────────────
+*.swp
+*.swo
+.cache/
+.parcel-cache/
+tmp/
+temp/

@@ -1,0 +1,1 @@
+"""ShopAssist AI FastAPI application."""
